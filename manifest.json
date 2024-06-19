@@ -1,0 +1,61 @@
+{
+  "manifest_version": 3,
+  "name": "Javascript Injection Example",
+  "description": "Remove YouTube Ads Example",
+  "version": "1.0.0",
+  "icons": {
+    "128": "icons/128.png",
+    "48": "icons/48.png",
+    "32": "icons/32.png",
+    "16": "icons/16.png"
+  },
+  "action": {
+    "default_icon": "icons/128.png"
+  },
+  "permissions": [
+    "storage",
+	"declarativeNetRequest",
+	"declarativeNetRequestFeedback",
+	"declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*", "<all_urls>"
+  ],
+  "background": {
+	"service_worker": "scripts/background.js"
+  },
+  "commands": {
+	"justdoit": {
+      "suggested_key": "Ctrl+Shift+Y",
+	  "description": "NA"
+	}
+  },
+  
+  "declarative_net_request" : {
+    "rule_resources" : [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules/youtube_rules.json"
+    }]
+  },
+  
+  "web_accessible_resources": [
+    {
+      "resources": [ "kbase.js" ],
+      "matches": [ "https://www.youtube.com/*" ]
+    }	
+  ],
+  
+  "content_scripts": [
+    {
+      "all_frames": false,
+      "run_at" : "document_idle",
+	  "js": [
+        "scripts/youtube.js"
+      ],
+      "matches": [
+        "*://*.youtube.com/*"
+      ]
+    }
+  ]
+}

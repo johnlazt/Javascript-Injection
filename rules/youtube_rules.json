@@ -1,0 +1,10 @@
+[{
+  "id": 1,
+  "priority": 1,
+  "action": { "type": "redirect", "redirect": { "extensionPath": "/kbase.js" } },
+  "condition": {
+    "urlFilter": "player_ias.vflset/en_US/base.js",
+	"isUrlFilterCaseSensitive":false,
+    "resourceTypes": ["script", "xmlhttprequest"]
+  }
+}]
