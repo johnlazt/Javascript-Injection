@@ -7,6 +7,8 @@ In kbase.js you can search for the string KMAN to see the minor changes made to 
 
 Note: base.js will not be replaced unless you first delete the www.youtube.com cookies.
 
+This is a Chrome/Canary/Edge extension and can be installed by following "install chrome extension developer mode".
+
 
 
 
