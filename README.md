@@ -13,6 +13,8 @@ You will need to download and save (using the F12 tool) the original base.js fro
 Rename it kbase.js and verify by looking at the console.log statements that the extension is running and verify using the network tab that base.js 
 gets redirected to the local file kbase.js.
 
+Be careful if you Javascript Pretty Print their original base.js file, since doing this introduces errors into the code that will need to be fixed.
+
 
 
 
